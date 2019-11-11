@@ -119,6 +119,7 @@
     <ClCompile Include="Building.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Point2D.cpp" />
+    <ClCompile Include="Pokemon.cpp" />
     <ClCompile Include="PokemonCenter.cpp" />
     <ClCompile Include="PokemonGym.cpp" />
     <ClCompile Include="TestCheckpoint1.cpp" />
@@ -129,6 +130,7 @@
     <ClInclude Include="Building.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Point2D.h" />
+    <ClInclude Include="Pokemon.h" />
     <ClInclude Include="PokemonCenter.h" />
     <ClInclude Include="PokemonGym.h" />
     <ClInclude Include="Vector2D.h" />
