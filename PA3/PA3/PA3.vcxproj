@@ -124,16 +124,22 @@
     <ClCompile Include="PokemonGym.cpp" />
     <ClCompile Include="TestCheckpoint1.cpp" />
     <ClCompile Include="TestCheckPoint2.cpp" />
+    <ClCompile Include="Testcheckpoint3cpp.cpp" />
     <ClCompile Include="Vector2D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BattleArena.h" />
     <ClInclude Include="Building.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Point2D.h" />
     <ClInclude Include="Pokemon.h" />
     <ClInclude Include="PokemonCenter.h" />
     <ClInclude Include="PokemonGym.h" />
+    <ClInclude Include="Rival.h" />
     <ClInclude Include="Vector2D.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram2.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

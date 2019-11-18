@@ -1,6 +1,7 @@
 #include "GameObject.h"
 #include "PokemonCenter.h"
 #include "PokemonGym.h"
+#include <string>
 
 enum PokemonStates {
 	STOPPED = 0,
@@ -14,11 +15,29 @@ enum PokemonStates {
 	RECOVERING_STAMINA = 8
 };
 
-class Pokemon : GameObject
+class Pokemon : public GameObject
 {
 public: 
 	Pokemon();
-	Pokemon(char in_code);
+	Pokemon(char in_code); // contructors
+	Pokemon(string in_name, int in_id, char in_code, unsigned int in_speed,
+		Point2D in_loc);
+
+	void ShowStatus(); //Show status function (most important)
+
+	void SetupDestination(Point2D dest);//important for functions 
+
+	void StartMoving(Point2D dest); //Functions
+
+	void StartMovingToCenter(PokemonCenter* center);
+
+	void StartMovingCenter(PokemonGym* gym);
+
+	void StartTraining(unsigned int num_training_units);
+
+	void StartRecoveringStamina(unsigned int num_stamina_points);
+
+
 private:
 	double speed;
 	bool is_in_gym;
@@ -28,7 +47,8 @@ private:
 	double pokemon_dollars;
 	unsigned int training_units_to_buy;
 	string name;
-	PokemonCenter * currrent_center;
-	PokemonGym * current_gym;
+	PokemonCenter* currrent_center;
+	PokemonGym* current_gym;
 	Point2D destination;
+	Vector2D delta;
 };

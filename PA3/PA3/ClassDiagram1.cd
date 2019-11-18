@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Fields:&#xD;&#xA;max_num_rivals&#xD;&#xA;num_rivals_remaining&#xD;&#xD;&#xA;dollar_cost_per_fight&#xD;&#xA;stamina_cost_per_fight&#xD;&#xD;&#xA;pokemon_count&#xD;&#xD;&#xA;&#xD;&#xA;methods: &#xD;&#xA;GetNumRivalsRemaining&#xD;&#xA; HasEnoughRivals&#xD;&#xA;GetDollarCost&#xD;&#xA;GetStaminaCost&#xD;&#xA;IsAbleToFight&#xD;&#xA;Update&#xD;&#xA;isBeaten&#xD;&#xA;ShowStatus">
+    <Position X="4.979" Y="5.014" Height="3.789" Width="1.953" />
+  </Comment>
+  <Comment CommentText="Fields:&#xD;&#xA;health&#xD;&#xA;physical_damage&#xD;&#xA;magical_damage&#xD;&#xA;defence&#xD;&#xA;stamina_cost_per_fight&#xD;&#xA;is_in_area&#xD;&#xA;current_area&#xD;&#xA;&#xD;&#xA;methods:&#xD;&#xA;Rival&#xD;&#xA;TakeHit&#xD;&#xA;get_phys_dmg&#xD;&#xA;get_magic_dmg&#xD;&#xA;get_defense&#xD;&#xA;get_health&#xD;&#xA;Update&#xD;&#xA;ShowStatus">
+    <Position X="9.511" Y="3.028" Height="3.62" Width="1.7" />
+  </Comment>
+  <Comment CommentText="methods cont:&#xD;&#xA;IsAlive&#xD;&#xA;TakeHit&#xD;&#xA;ReadyBattle&#xD;&#xA; StartBattle&#xD;&#xA;Update&#xD;&#xA;StartMoving&#xD;&#xA;StartMovingToCenter&#xD;&#xA;StartMovingToGym&#xD;&#xA;StartTraining&#xD;&#xA;StartRecoveringStamina&#xD;&#xA;Stop&#xD;&#xA;IsExhausted&#xD;&#xA;ShouldBeVisible&#xD;&#xA;UpdateLocation&#xD;&#xA;SetupDestination">
+    <Position X="7.086" Y="5.761" Height="2.959" Width="1.7" />
+  </Comment>
+  <Class Name="Building">
+    <Position X="2.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAABAAAAAAAAAAIAAAAACAAgAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Building.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObject">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAEACAAAAAAAAIAAAAEACAAAAAAAEAAAAAAIAAAA=</HashCode>
+      <FileName>GameObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Point2D">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>Point2D.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pokemon">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAREgCAAAAIAAAAIAAAAAEAQAAAAAAFEBAAAA=</HashCode>
+      <FileName>Pokemon.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokemonCenter">
+    <Position X="2.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ElQAAAAAAAAAAAAAIAAAAAAAIAAAAAAABAIAAAAAgQA=</HashCode>
+      <FileName>PokemonCenter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokemonGym">
+    <Position X="0.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gASAAAAMCAABAAAAIAAAAAAAgAAAAIAABEAAAEAEAAA=</HashCode>
+      <FileName>PokemonGym.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vector2D">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>Vector2D.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleArena" Collapsed="true">
+    <Position X="5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BattleArena.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rival" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rival.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="PokemonStates">
+    <Position X="11.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAIAAAAAAAAAIAEQAgCEIAAA=</HashCode>
+      <FileName>Pokemon.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PokemonCenterStates">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PokemonCenter.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PokemonGymStates">
+    <Position X="13.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PokemonGym.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
