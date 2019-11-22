@@ -42,6 +42,6 @@ double GetDistanceBetween(Point2D p1, Point2D p2)
 {
 	double xd = p2.x - p1.x;
 	double yd = p2.y - p1.y;
-	double distance = (pow(xd, 2) + pow(yd, 2));
+	double distance = sqrt((pow(xd, 2) + pow(yd, 2)));
 	return distance;
 }

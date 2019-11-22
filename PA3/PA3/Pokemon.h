@@ -25,18 +25,29 @@ public:
 
 	void ShowStatus(); //Show status function (most important)
 
-	void SetupDestination(Point2D dest);//important for functions 
-
 	void StartMoving(Point2D dest); //Functions
 
 	void StartMovingToCenter(PokemonCenter* center);
 
-	void StartMovingCenter(PokemonGym* gym);
+	void StartMovingToGym(PokemonGym* gym);
 
 	void StartTraining(unsigned int num_training_units);
 
 	void StartRecoveringStamina(unsigned int num_stamina_points);
 
+	void Stop();
+
+	bool isExhausted();
+
+	bool ShouldBeVisible();
+
+	bool Update();
+
+protected:
+
+	bool UpdateLocation();
+
+	void SetupDestination(Point2D dest);//important for functions 
 
 private:
 	double speed;
@@ -46,8 +57,9 @@ private:
 	unsigned int experience_points;
 	double pokemon_dollars;
 	unsigned int training_units_to_buy;
+	unsigned int stamina_points_to_buy;
 	string name;
-	PokemonCenter* currrent_center;
+	PokemonCenter* current_center;
 	PokemonGym* current_gym;
 	Point2D destination;
 	Vector2D delta;

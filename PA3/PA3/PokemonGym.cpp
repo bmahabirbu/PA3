@@ -47,8 +47,8 @@ unsigned int PokemonGym::GetNumTrainingUnitsRemaining()
 
 bool PokemonGym::IsAbleToTrain(unsigned int unit_qty, double budget, unsigned int stamina)
 {
-	double Scost = unit_qty * stamina_cost_per_training_unit;
-	double Tcost = unit_qty * dollar_cost_per_training_unit;
+	double Scost = unit_qty * stamina_cost_per_training_unit; //get stamina cost
+	double Tcost = unit_qty * dollar_cost_per_training_unit; //get dollar cost
 	if (budget >= Tcost && stamina >= Scost)
 	{
 		return true;
@@ -63,14 +63,15 @@ unsigned int PokemonGym::TrainPokemon(unsigned int training_units)
 {
 	if (num_training_units_remaining >= training_units)
 	{
-		int totalT= num_training_units_remaining - training_units;
-		int totalexp = totalT * (experience_points_per_training_unit);
-		return totalexp;
+		num_training_units_remaining = num_training_units_remaining - training_units; //minus units remaining from units asked
+		int totalexp = num_training_units_remaining * (experience_points_per_training_unit); //get exp
+		return totalexp; 
 	}
 	else
 	{
-		int totalT = num_training_units_remaining;
-		int totalexp = totalT * (experience_points_per_training_unit);
+		int totalT = num_training_units_remaining; //units remaining equals total training units
+		int totalexp = totalT * (experience_points_per_training_unit); //get exp
+		num_training_units_remaining = 0; //no more training units
 		return totalexp;
 	}
 }
