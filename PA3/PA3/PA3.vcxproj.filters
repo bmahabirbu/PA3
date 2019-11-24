@@ -42,7 +42,7 @@
     <ClCompile Include="Pokemon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Testcheckpoint3cpp.cpp">
+    <ClCompile Include="Testcheckpoint3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -2,6 +2,7 @@
 #include "PokemonCenter.h"
 #include "PokemonGym.h"
 #include <string>
+#include <ctime>
 
 enum PokemonStates {
 	STOPPED = 0,
@@ -64,3 +65,5 @@ private:
 	Point2D destination;
 	Vector2D delta;
 };
+
+double GetRandomAmountOfPokemonDollars();
