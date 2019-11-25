@@ -44,7 +44,7 @@ Pokemon::Pokemon(string in_name, int in_id, char in_code, unsigned int in_speed,
 	is_in_gym = false;
 	is_in_center = true;
 	experience_points = 0;
-	pokemon_dollars = 0; 
+	pokemon_dollars = 20; 
 	training_units_to_buy = 0;
 	stamina_points_to_buy = 0;
 	speed = in_speed;
@@ -103,7 +103,33 @@ void Pokemon::ShowStatus()
 
 bool Pokemon::UpdateLocation()
 { 
-	if (destination.x < location.x || destination.y < location.y) //error check for walking backwards ie negative walking
+	if (destination.x < location.x && destination.y > location.y) //if walking in x is negative and y is positive
+	{
+		if (destination.x >= location.x + delta.x && destination.y <= location.y + delta.y) //checks to see if destination
+			//is within one step away, then puts it to destination
+		{
+			location = destination;
+			stamina -= 1; //reduce stamina by one
+			pokemon_dollars += GetRandomAmountOfPokemonDollars(); //gain dollars
+			cout << "Arrived (-)" << endl;
+			return true;
+		}
+	}
+
+	if (destination.x > location.x && destination.y < location.y) //if walking in x is positive and y is negative
+	{
+		if (destination.x <= location.x + delta.x && destination.y >= location.y + delta.y) //checks to see if destination
+			//is within one step away, then puts it to destination
+		{
+			location = destination;
+			stamina -= 1; //reduce stamina by one
+			pokemon_dollars += GetRandomAmountOfPokemonDollars(); //gain dollars
+			cout << "Arrived (-)" << endl;
+			return true;
+		}
+	}
+
+	if (destination.x < location.x && destination.y < location.y) //if walking in x and y is both negative
 	{
 		if (destination.x >= location.x + delta.x && destination.y >= location.y + delta.y) //checks to see if destination
 			//is within one step away, then puts it to destination
@@ -115,7 +141,7 @@ bool Pokemon::UpdateLocation()
 			return true;
 		}
 	}
-	if (destination.x > location.x || destination.y > location.y)//walking forwards
+	if (destination.x > location.x && destination.y > location.y)// if walking in x and y is both positive
 	{
 		if (destination.x <= location.x + delta.x && destination.y <= location.y + delta.y) //checks to see if destination
 			//is within one step away, then puts it to destination
@@ -269,7 +295,7 @@ void Pokemon::StartRecoveringStamina(unsigned int num_stamina_points)
 	if (error == false)
 	{
 		state = RECOVERING_STAMINA;
-		cout << display_code << id_num << " Started recovering " << stamina << " stamina point(s) at Pokemon Center " <<
+		cout << display_code << id_num << " Started recovering " << num_stamina_points << " stamina point(s) at Pokemon Center " <<
 			current_center->GetId() << endl;
 		stamina_points_to_buy = num_stamina_points;
 	}
