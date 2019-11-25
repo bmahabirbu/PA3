@@ -17,6 +17,11 @@ Pokemon::Pokemon()
 	state = STOPPED;
 }
 
+Pokemon::~Pokemon()
+{
+	cout << "Pokemon destructed" << endl;
+}
+
 Pokemon::Pokemon(char in_code)
 {
 	speed = 5;
@@ -212,19 +217,19 @@ void Pokemon::StartTraining(unsigned int num_training_units)
 
 	if (location.x != current_gym->GetLocation().x && location.y != current_gym->GetLocation().y) //print only when location doesnt equal gym location
 	{
-		cout << display_code << id_num << "I can only train in a Pokemon Gym!" << endl;
+		cout << display_code << id_num << " I can only train in a Pokemon Gym! " << endl;
 		error = true; 
 	}
 
 	if (current_gym->IsAbleToTrain(num_training_units, pokemon_dollars, stamina) == false) //print only when stamina and or dollars are less than required
 	{
-		cout << display_code << id_num << "Not enough stamina and/or money for training" << endl;
+		cout << display_code << id_num << " Not enough stamina and/or money for training " << endl;
 		error = true;
 	}
 
 	if (current_gym->GetState() == BEATEN)
 	{
-		cout << display_code << id_num << "Cannot train! This Pokemon Gym is already beaten!" << endl;
+		cout << display_code << id_num << " Cannot train! This Pokemon Gym is already beaten! " << endl;
 	}
 	
 	if (error == false)
@@ -281,6 +286,16 @@ bool Pokemon::isExhausted()
 	{
 		return true;
 	}
+}
+
+string Pokemon::GetName()
+{
+	return name;
+}
+
+char Pokemon::GetDisplay_code()
+{
+	return display_code;
 }
 
 bool Pokemon::ShouldBeVisible()
@@ -381,5 +396,6 @@ bool Pokemon::Update()
 
 double GetRandomAmountOfPokemonDollars()
 {
-	return rand() % 10;
+	//set srand seed in main
+	return rand() % 2;
 }

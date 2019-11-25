@@ -20,6 +20,7 @@ class Pokemon : public GameObject
 {
 public: 
 	Pokemon();
+	~Pokemon();
 	Pokemon(char in_code); // contructors
 	Pokemon(string in_name, int in_id, char in_code, unsigned int in_speed,
 		Point2D in_loc);
@@ -39,6 +40,10 @@ public:
 	void Stop();
 
 	bool isExhausted();
+
+	string GetName();
+
+	char GetDisplay_code();
 
 	bool ShouldBeVisible();
 

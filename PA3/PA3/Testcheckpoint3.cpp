@@ -1,3 +1,4 @@
+/*
 #include "Pokemon.h"
 #include "GameObject.h"
 #include <ctime>
@@ -26,4 +27,19 @@ int main(void)
 	pikachu.Update();
 	pikachu.Stop();
 	pikachu.Update();
+	pikachu.StartMovingToGym(B);
+	pikachu.Update();
+	pikachu.Update();
+	pikachu.Update();
+	pikachu.Update();
+	pikachu.Update();
+	cout << "moment of truth" << endl;
+	pikachu.StartTraining(1);
+	cout << "moment of truth" << endl;
+	pikachu.Update();
+	pikachu.Update();
+	pikachu.Update();
+	pikachu.Stop();
+	pikachu.Update();
 }
+*/

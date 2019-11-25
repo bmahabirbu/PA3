@@ -13,7 +13,12 @@ PokemonGym::PokemonGym()
 	cout << "PokemonGym default contructed" << endl;
 }
 
-PokemonGym::PokemonGym(unsigned int max_training_units, unsigned int stamina_cost, int dollar_cost,
+PokemonGym::~PokemonGym()
+{
+	cout << "PokemonGym destructed" << endl;
+}
+
+PokemonGym::PokemonGym(unsigned int max_training_units, unsigned int stamina_cost, double dollar_cost,
 	unsigned int exp_points_per_unit, int in_id, Point2D in_loc)
 {
 	state = NOT_BEATEN;

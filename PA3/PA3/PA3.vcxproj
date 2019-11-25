@@ -120,7 +120,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Building.cpp" />
+    <ClCompile Include="GameCommand.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="Model.cpp" />
     <ClCompile Include="Point2D.cpp" />
     <ClCompile Include="Pokemon.cpp" />
     <ClCompile Include="PokemonCenter.cpp" />
@@ -128,12 +130,15 @@
     <ClCompile Include="TestCheckpoint1.cpp" />
     <ClCompile Include="TestCheckPoint2.cpp" />
     <ClCompile Include="Testcheckpoint3.cpp" />
+    <ClCompile Include="TestCheckpoint4.cpp" />
     <ClCompile Include="Vector2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BattleArena.h" />
     <ClInclude Include="Building.h" />
+    <ClInclude Include="GameCommand.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="Model.h" />
     <ClInclude Include="Point2D.h" />
     <ClInclude Include="Pokemon.h" />
     <ClInclude Include="PokemonCenter.h" />

@@ -15,12 +15,20 @@ protected:
 	char state;
 public:
 	GameObject();
+	virtual ~GameObject(); //declares destructor virtual
 	GameObject(char in_code);
 	GameObject(Point2D in_loc, int in_id, char in_code);
 	Point2D GetLocation();
 	int GetId();
 	char GetState();
-	void ShowStatus();
+
+	virtual void ShowStatus(); //declares showstatus to be virtual
+
+	//Virtual function
+
+	virtual bool ShouldBeVisible() = 0;
+
+	virtual bool Update() = 0; //pure virtual update function
 };
 
 #endif

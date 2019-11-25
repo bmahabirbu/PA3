@@ -11,6 +11,11 @@ GameObject::GameObject()
 	display_code = 0;
 }
 
+GameObject::~GameObject()
+{
+	cout << "GameObject destructed" << endl;
+}
+
 GameObject::GameObject(char in_code)
 {
 	display_code = in_code;
@@ -45,5 +50,5 @@ char GameObject::GetState()
 
 void GameObject::ShowStatus()
 {
-	cout << display_code << " " << id_num << " at location " << location;
+	cout << display_code << id_num << " at location " << location;
 }

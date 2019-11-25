@@ -16,6 +16,7 @@ private:
 	double dollar_cost_per_stamina_point;
 public:
 	PokemonCenter();
+	~PokemonCenter();
 	PokemonCenter(int in_id, double stamina_cost, unsigned int stamina_cap,
 		Point2D in_loc); //contructors
 

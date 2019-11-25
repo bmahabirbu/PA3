@@ -11,6 +11,11 @@ PokemonCenter::PokemonCenter()
 	cout << "PokemonCenter default contructed" << endl;
 }
 
+PokemonCenter::~PokemonCenter()
+{
+	cout << "PokemonCenter destructed" << endl;
+}
+
 PokemonCenter::PokemonCenter(int in_id, double stamina_cost, unsigned int stamina_cap, Point2D in_loc)
 {
 	id_num = in_id;
