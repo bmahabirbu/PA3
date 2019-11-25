@@ -37,10 +37,17 @@ Model::Model()
 
 Model::~Model()
 {
-	delete[] pokemon_ptrs;
-	delete[] centers_ptrs;
-	delete[] gym_ptrs;
-	delete[] object_ptrs; 
+	for (int i = 0; i < 2; i++)
+	{
+		delete pokemon_ptrs[i];
+		delete centers_ptrs[i];
+		delete gym_ptrs[i];
+	}
+
+	for (int i = 0; i < 6; i++)
+	{
+		delete object_ptrs[i];
+	}
 	
 	cout << "Model destructed" << endl;
 }
