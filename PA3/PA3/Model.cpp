@@ -2,7 +2,7 @@
 
 Model::Model()
 {
-	int time = 0;
+	time = 0;
 	Pokemon* Pokemon1 = new Pokemon("Pikachu", 1, 'P', 2, Point2D(5, 1));
 	Pokemon* Pokemon2 = new Pokemon("Bulbasaur", 2, 'P', 1, Point2D(10, 1));
 	PokemonCenter* PokemonCenter_1 = new PokemonCenter(1, 1, 100, Point2D(1, 20));
@@ -37,13 +37,6 @@ Model::Model()
 
 Model::~Model()
 {
-	for (int i = 0; i < 2; i++)
-	{
-		delete pokemon_ptrs[i];
-		delete centers_ptrs[i];
-		delete gym_ptrs[i];
-	}
-
 	for (int i = 0; i < 6; i++)
 	{
 		delete object_ptrs[i];
@@ -86,7 +79,8 @@ PokemonGym* Model::GetPokemonGymPtr(int id)
 
 bool Model::Update()
 {
-	time += 1;
+	time = time + 1;
+	cout << "time " << time << endl;
 	for (int i = 0; i < 6; i++)
 	{
 		

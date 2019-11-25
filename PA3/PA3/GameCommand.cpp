@@ -36,12 +36,11 @@ void DoMoveToCenterCommand(Model & model, int pokemon_id, int center_id)
 
 void DoMoveToGymCommand(Model & model, int pokemon_id, int gym_id)
 {
-	while (model.GetPokemonPtr(pokemon_id) == 0)//error check
+	while (model.GetPokemonPtr(pokemon_id) == 0) //error check
 	{
 		cout << "Error: please enter a valid pokemon id!" << endl;
 		model.GetPokemonPtr(pokemon_id);
 	}
-
 	Pokemon* Poke1 = model.GetPokemonPtr(pokemon_id);
 
 	while (model.GetPokemonGymPtr(gym_id) == 0)//error check

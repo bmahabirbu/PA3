@@ -68,8 +68,8 @@ unsigned int PokemonGym::TrainPokemon(unsigned int training_units)
 {
 	if (num_training_units_remaining >= training_units)
 	{
-		num_training_units_remaining = num_training_units_remaining - training_units; //minus units remaining from units asked
-		int totalexp = num_training_units_remaining * (experience_points_per_training_unit); //get exp
+		num_training_units_remaining -= training_units; //minus units remaining from units asked
+		int totalexp = training_units * (experience_points_per_training_unit); //get exp
 		return totalexp; 
 	}
 	else

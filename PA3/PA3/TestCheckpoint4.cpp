@@ -2,11 +2,11 @@
 
 int main(void)
 {
+	srand(time(NULL));
 	Model model;
 	
-	model.ShowStatus();
 
-	/*
+	
 	while (true)
 	{
 		char command;
@@ -87,6 +87,6 @@ int main(void)
 		}
 
 	}
-	*/
+	
 
 }

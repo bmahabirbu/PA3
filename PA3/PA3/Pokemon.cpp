@@ -44,7 +44,7 @@ Pokemon::Pokemon(string in_name, int in_id, char in_code, unsigned int in_speed,
 	is_in_gym = false;
 	is_in_center = true;
 	experience_points = 0;
-	pokemon_dollars = 0;
+	pokemon_dollars = 0; 
 	training_units_to_buy = 0;
 	stamina_points_to_buy = 0;
 	speed = in_speed;
@@ -61,6 +61,9 @@ void Pokemon::ShowStatus()
 {
 	cout << name << " status: " << endl;
 	GameObject::ShowStatus();
+	cout << "pokedollars " << pokemon_dollars << endl;
+	cout << "experience " << experience_points << endl;
+	cout << "stamina " << stamina << endl;
 
 	switch (state)//switch statement to print information about the value of the state
 	{
@@ -100,7 +103,7 @@ void Pokemon::ShowStatus()
 
 bool Pokemon::UpdateLocation()
 { 
-	if (destination.x < location.x && destination.y < location.y) //error check for walking backwards ie negative walking
+	if (destination.x < location.x || destination.y < location.y) //error check for walking backwards ie negative walking
 	{
 		if (destination.x >= location.x + delta.x && destination.y >= location.y + delta.y) //checks to see if destination
 			//is within one step away, then puts it to destination
@@ -109,12 +112,10 @@ bool Pokemon::UpdateLocation()
 			stamina -= 1; //reduce stamina by one
 			pokemon_dollars += GetRandomAmountOfPokemonDollars(); //gain dollars
 			cout << "Arrived (-)" << endl;
-			cout << stamina << endl;
-			cout << pokemon_dollars << endl;
 			return true;
 		}
 	}
-	if (destination.x > location.x && destination.y > location.y)//walking forwards
+	if (destination.x > location.x || destination.y > location.y)//walking forwards
 	{
 		if (destination.x <= location.x + delta.x && destination.y <= location.y + delta.y) //checks to see if destination
 			//is within one step away, then puts it to destination
@@ -375,6 +376,7 @@ bool Pokemon::Update()
 		experience_points += current_gym->TrainPokemon(training_units_to_buy); // gain exp from training units
 		cout << "** " << name << " completed " << training_units_to_buy << " training unit(s)!**" << endl;
 		cout << " pokemon dollars remaining " << pokemon_dollars << endl;
+		state = IN_GYM;
 	}
 		break;
 
@@ -385,6 +387,7 @@ bool Pokemon::Update()
 		pokemon_dollars -= current_center->GetDollarCost(stamina_points_to_buy);
 		cout << "** " << name << " recovered " << current_center->DistributeStamina(stamina_points_to_buy) << " stamina point(s)!**" << endl;
 		cout << " pokemon dollars remaining " << pokemon_dollars << endl;
+		state = IN_CENTER;
 	}
 
 		break;
