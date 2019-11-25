@@ -114,4 +114,14 @@ void DoRecoverInCenterCommand(Model & model, int pokemon_id, unsigned int stamin
 	
 }
 
+void DoGoCommand(Model & model, View & view)
+{
+
+}
+
+void DoRunCommand(Model & model, View & view)
+{
+
+}
+
 

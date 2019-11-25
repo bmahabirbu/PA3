@@ -1,5 +1,6 @@
 #pragma once
 #include "Pokemon.h"
+#include "View.h"
 
 class Model
 {
@@ -13,7 +14,7 @@ public:
 	PokemonGym* GetPokemonGymPtr(int id);
 
 	bool Update(); //Update, View, Showstatus
-	//void Display(View& view)
+	//void Display(View& view);
 	void ShowStatus();
 
 private:

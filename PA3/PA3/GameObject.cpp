@@ -1,6 +1,7 @@
 #include "Point2D.h"
 #include "GameObject.h"
 #include "Vector2D.h"
+#include "View.h"
 #include <iostream>
 using namespace std;
 
@@ -55,7 +56,16 @@ void GameObject::ShowStatus()
 
 void GameObject::DrawSelf(char * ptr)
 {
-	*ptr = display_code;
-	char id_char = (char)id_num;
-	*(ptr+1) = id_char;
+	
+	if ((*ptr) == '.' && *(ptr + 1) == ' ')
+	{
+		*ptr = this->display_code;
+		*(ptr + 1) = (char)(this->id_num + 48);
+	}
+	else
+	{
+		*ptr = '*';
+		*(ptr + 1) = ' ';
+	}
+
 }

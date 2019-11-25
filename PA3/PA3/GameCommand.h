@@ -1,5 +1,6 @@
 #pragma once
 #include "Model.h"
+#include "View.h"
 
 //GameCommand function headers
 
@@ -17,6 +18,6 @@ void DoTrainInGymCommand(Model & model, int pokemon_id, unsigned int
 void DoRecoverInCenterCommand(Model & model, int pokemon_id, unsigned int
 	stamina_points);
 
-//void DoGoCommand(Model & model, View& view);
+void DoGoCommand(Model &model, View &view);
 
-//void DoRunCommand(Model & model, View& view);
+void DoRunCommand(Model &model, View &view);

@@ -106,6 +106,11 @@ bool Model::Update()
 		
 }
 
+//void Model::Display(View &view)
+//{
+
+//}
+
 void Model::ShowStatus()
 {
 	for (int i = 0; i < 6; i++)
