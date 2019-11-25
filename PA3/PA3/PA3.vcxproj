@@ -131,7 +131,9 @@
     <ClCompile Include="TestCheckPoint2.cpp" />
     <ClCompile Include="Testcheckpoint3.cpp" />
     <ClCompile Include="TestCheckpoint4.cpp" />
+    <ClCompile Include="testview.cpp" />
     <ClCompile Include="Vector2D.cpp" />
+    <ClCompile Include="View.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BattleArena.h" />
@@ -145,6 +147,7 @@
     <ClInclude Include="PokemonGym.h" />
     <ClInclude Include="Rival.h" />
     <ClInclude Include="Vector2D.h" />
+    <ClInclude Include="View.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram2.cd" />

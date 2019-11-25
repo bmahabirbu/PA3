@@ -47,7 +47,7 @@ unsigned int PokemonCenter::GetNumStaminaPointsRemaining()
 
 bool PokemonCenter::CanAffordStaminaPoints(unsigned int stamina_points, double budget)
 {
-	if (budget > (stamina_points*dollar_cost_per_stamina_point)) //gets the price sees if you have enough money
+	if (budget >= (stamina_points*dollar_cost_per_stamina_point)) //gets the price sees if you have enough money
 	{
 		return true;
 	}
@@ -91,14 +91,15 @@ bool PokemonCenter::Update()
 	}
 	if (num_stamina_points_remaining > 0 || display_code == 'c')
 	{
+		ShowStatus();
 		return false;
 	}
 }
 
 void PokemonCenter::ShowStatus()
 {
-	cout << "PokemonCenter Status " << endl;
+	cout << "PokemonCenter Status: " << display_code << id_num << " located at " << location;
 	Building::ShowStatus();
-	cout << "Pokemon dollars per stamina point: " << dollar_cost_per_stamina_point << " has "
+	cout << "\t Pokemon dollars per stamina point: " << dollar_cost_per_stamina_point << endl << " has "
 		<< num_stamina_points_remaining << " stamina point(s) remaining" << endl;
 }

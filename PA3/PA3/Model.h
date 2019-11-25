@@ -1,3 +1,4 @@
+#pragma once
 #include "Pokemon.h"
 
 class Model

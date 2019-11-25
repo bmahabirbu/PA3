@@ -92,6 +92,7 @@ bool PokemonGym::Update()
 	}
 	else
 	{
+		ShowStatus();
 		return false;
 	}
 }
@@ -110,12 +111,12 @@ bool PokemonGym::IsBeaten()
 
 void PokemonGym::ShowStatus()
 {
-	cout << "Pokemon Gym Status " << endl;
+	cout << "Pokemon Gym Status " << display_code << id_num << " located at " << location;
 	Building::ShowStatus();
-	cout << "Max number of training units: "  << max_number_of_training_units << endl;
-	cout << "Stamina cost per training unit: " << stamina_cost_per_training_unit << endl;
-	cout << "Pokemon dollar per training unit: " << dollar_cost_per_training_unit << endl;
-	cout << "Experience points per training unit: " << experience_points_per_training_unit << endl;
-	cout << num_training_units_remaining << " training unit(s) is/are remaining for this gym" << endl;
+	cout << "\t Max number of training units: "  << max_number_of_training_units << endl;
+	cout << "\t Stamina cost per training unit: " << stamina_cost_per_training_unit << endl;
+	cout << "\t Pokemon dollar per training unit: " << dollar_cost_per_training_unit << endl;
+	cout << "\t Experience points per training unit: " << experience_points_per_training_unit << endl;
+	cout << "\t" << num_training_units_remaining << " training unit(s) is/are remaining for this gym" << endl;
 }
 
