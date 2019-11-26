@@ -14,10 +14,13 @@ public:
 	PokemonGym* GetPokemonGymPtr(int id);
 
 	bool Update(); //Update, View, Showstatus
-	//void Display(View& view);
+
+	void Display(View &view);
+
 	void ShowStatus();
 
-private:
+//private:
+
 	//Model(const Model &old_object); //copy contructor
 	int time; //variables
 	GameObject* object_ptrs[10];

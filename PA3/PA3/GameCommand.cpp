@@ -77,7 +77,7 @@ void DoStopCommand(Model & model, int pokemon_id)
 	}
 	Pokemon* Poke1 = model.GetPokemonPtr(pokemon_id);
 
-	cout << "Stopping " << Poke1->GetName() << Poke1->GetDisplay_code() << Poke1->GetId();
+	cout << "Stopping " << Poke1->GetName() << endl;
 	Poke1->Stop();
 
 }
@@ -116,12 +116,22 @@ void DoRecoverInCenterCommand(Model & model, int pokemon_id, unsigned int stamin
 
 void DoGoCommand(Model & model, View & view)
 {
-
+	cout << "Advancing to next event" << endl; 
+	model.Update();
+	model.Display(view);
 }
 
 void DoRunCommand(Model & model, View & view)
 {
-
+	for (int i = 0; i < 5; i++) //loop untill 5 or update return true and display
+	{
+		if (model.Update() == true)
+		{
+			model.Display(view);
+			break;
+		}
+	}
+	model.Display(view);
 }
 
 

@@ -1,6 +1,5 @@
 #pragma once
 #include "Model.h"
-#include "View.h"
 
 //GameCommand function headers
 

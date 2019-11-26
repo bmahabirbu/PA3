@@ -30,7 +30,7 @@ public:
 
 	virtual bool Update() = 0; //pure virtual update function
 
-	void DrawSelf(char * ptr);
+	void DrawSelf(char* ptr);
 };
 
 #endif

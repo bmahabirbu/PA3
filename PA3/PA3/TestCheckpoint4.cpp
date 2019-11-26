@@ -1,13 +1,15 @@
 /*
 #include "GameCommand.h"
+#include "View.h"
 
 int main(void)
 {
 	srand(time(NULL));
 	Model model;
-	
+	View view;
+	view.Clear();
+	model.Display(view);
 
-	
 	while (true)
 	{
 		char command;
@@ -65,13 +67,13 @@ int main(void)
 
 			case 'v':
 			{
-				model.Update();
+				DoGoCommand(model, view);
 			}
 			break;
 
 			case 'x':
 			{
-
+				DoRunCommand(model, view);
 			}
 			break;
 
@@ -92,3 +94,4 @@ int main(void)
 
 }
 */
+

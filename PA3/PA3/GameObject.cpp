@@ -1,7 +1,7 @@
 #include "Point2D.h"
 #include "GameObject.h"
 #include "Vector2D.h"
-#include "View.h"
+//#include "View.h"
 #include <iostream>
 using namespace std;
 
@@ -54,18 +54,18 @@ void GameObject::ShowStatus()
 	cout << display_code << id_num << " at location " << location;
 }
 
-void GameObject::DrawSelf(char * ptr)
+void GameObject::DrawSelf(char* ptr)
 {
 	
-	if ((*ptr) == '.' && *(ptr + 1) == ' ')
+	if (ptr[0] == '.' && ptr[1] == ' ')
 	{
-		*ptr = this->display_code;
-		*(ptr + 1) = (char)(this->id_num + 48);
+		ptr[0] = display_code;
+		ptr[1] = (char)(id_num + 48);
 	}
 	else
 	{
-		*ptr = '*';
-		*(ptr + 1) = ' ';
+		ptr[0] = '*';
+		ptr[1] = ' ';
 	}
 
 }

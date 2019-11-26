@@ -106,10 +106,21 @@ bool Model::Update()
 		
 }
 
-//void Model::Display(View &view)
-//{
+void Model::Display(View &view)
+{
+	//view.Clear();
 
-//}
+	view.Plot(object_ptrs[0]);
+	view.Plot(object_ptrs[1]);
+	view.Plot(object_ptrs[2]);
+	view.Plot(object_ptrs[3]);
+	view.Plot(object_ptrs[4]);
+	view.Plot(object_ptrs[5]);
+
+
+	view.Draw();
+}
+
 
 void Model::ShowStatus()
 {

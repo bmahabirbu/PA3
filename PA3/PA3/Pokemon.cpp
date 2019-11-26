@@ -337,7 +337,10 @@ bool Pokemon::isExhausted()
 	{
 		return true;
 	}
-	else return false;
+	else
+	{
+		return false;
+	}
 }
 
 string Pokemon::GetName()
@@ -356,7 +359,10 @@ bool Pokemon::ShouldBeVisible()
 	{
 		return true;
 	}
-	else return false;
+	else
+	{
+		return false;
+	}
 }
 
 bool Pokemon::Update()
