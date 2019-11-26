@@ -28,7 +28,7 @@ void Building::RemoveOnePokemon()
 
 void Building::ShowStatus()
 {
-	cout << pokemon_count << " pokemon is/are in this building" << endl; //printed statement with pokemon count
+	cout <<  "\t" << pokemon_count << " pokemon is/are in this building" << endl; //printed statement with pokemon count
 }
 
 bool Building::ShouldBeVisible()

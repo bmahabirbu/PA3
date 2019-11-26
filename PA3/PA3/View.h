@@ -16,7 +16,7 @@ public:
 	void Draw();
 
 
-//private:
+private:
 
 	int size;
 	double scale;

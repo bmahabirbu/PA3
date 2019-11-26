@@ -51,13 +51,13 @@
     <ClCompile Include="GameCommand.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TestCheckpoint4.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="View.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="testview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

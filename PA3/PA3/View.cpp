@@ -47,7 +47,7 @@ bool View::GetSubscripts(int &out_x, int &out_y, Point2D location)
 
 void View::Draw()
 {	
-	for (int column = size-1; column >= 0; column --) //column
+	for (int column = size-1; column >= 0; column --) //column go 11-0 based on sample
 	{
 		if (column % 2 == 0) //prints y axis
 		{
@@ -63,7 +63,7 @@ void View::Draw()
 		else
 			cout << "  "; //end of y axis
 
-		for (int row = 0; row < size ; row++) //row
+		for (int row = 0; row < size ; row++) //row go in 0-11 based on output
 		{
 			for (int char_num = 0; char_num < scale; char_num++) //state
 			{

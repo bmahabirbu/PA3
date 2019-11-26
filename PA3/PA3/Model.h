@@ -19,7 +19,7 @@ public:
 
 	void ShowStatus();
 
-//private:
+private:
 
 	//Model(const Model &old_object); //copy contructor
 	int time; //variables

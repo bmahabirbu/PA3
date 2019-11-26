@@ -108,15 +108,17 @@ bool Model::Update()
 
 void Model::Display(View &view)
 {
-	//view.Clear();
+	view.Clear();
 
-	view.Plot(object_ptrs[0]);
-	view.Plot(object_ptrs[1]);
-	view.Plot(object_ptrs[2]);
-	view.Plot(object_ptrs[3]);
-	view.Plot(object_ptrs[4]);
-	view.Plot(object_ptrs[5]);
+	for (int i = 0; i < 6; i++)
+	{
+		if (object_ptrs[i]->ShouldBeVisible() == false)
+		{
+			continue;
+		}
 
+		view.Plot(object_ptrs[i]); //plot all objects from array of pointers
+	}
 
 	view.Draw();
 }

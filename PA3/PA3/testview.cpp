@@ -1,4 +1,4 @@
-
+/*
 #include "Model.h"
 #include "View.h"
 
@@ -9,3 +9,4 @@ int main(void)
 	view.Clear();
 	model.Display(view);
 }
+*/

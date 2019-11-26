@@ -1,4 +1,3 @@
-/*
 #include "GameCommand.h"
 #include "View.h"
 
@@ -7,7 +6,6 @@ int main(void)
 	srand(time(NULL));
 	Model model;
 	View view;
-	view.Clear();
 	model.Display(view);
 
 	while (true)
@@ -93,5 +91,5 @@ int main(void)
 	
 
 }
-*/
+
 

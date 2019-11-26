@@ -130,7 +130,7 @@
     <ClCompile Include="TestCheckpoint1.cpp" />
     <ClCompile Include="TestCheckPoint2.cpp" />
     <ClCompile Include="Testcheckpoint3.cpp" />
-    <ClCompile Include="TestCheckpoint4.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="testview.cpp" />
     <ClCompile Include="Vector2D.cpp" />
     <ClCompile Include="View.cpp" />
